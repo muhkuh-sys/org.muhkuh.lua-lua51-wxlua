@@ -1,0 +1,32 @@
+flasher
+=======
+
+== Status
+
+TravisCI: image:https://travis-ci.org/muhkuh-sys/org.muhkuh.lua-wxlua.svg?branch=master["TravisCI build status", link="https://travis-ci.org/muhkuh-sys/org.muhkuh.lua-wxlua"]
+
+
+== About
+
+This is a MinGW-w64 build of the wxLUA module for the LUA 5.1.5 interpreter. The archive contains the LUA module for 32 and 64 bit. It can be loaded into the interpreter with
+
+ require("wx")
+
+For the 64bit version some patches were necessary. The official subversion repository was imported to GitHub. Maybe the patches will be accepted by the wxLua maintainers.
+
+
+== Infrastructure
+
+This chapter describes the current infrastructure of the project.
+
+The patched wxLua and repositories are here: https://github.com/muhkuh-sys/wxlua https://github.com/muhkuh-sys/wxstedit
+
+wxLua is quite huge and it depends on wxWidgets which is not small either. Both wxLua and wxWidgets would easily break the 50 minutes limit on TravisCI, so they are build on the "openSUSE Build Serive" (OBS):
+https://build.opensuse.org/package/show/home:doc_bacardi/mingw64-wxwidgets https://build.opensuse.org/package/show/home:doc_bacardi/mingw64-lua51-wxlua
+
+On TravisCI the wxLua Ubuntu package is only re-packaged as an MBS Ivy package: https://travis-ci.org/muhkuh-sys/org.muhkuh.lua-wxlua
+
+The build results from TravisCI are copied after auccess to Bintray: https://bintray.com/muhkuh/Muhkuh/lua51-wxlua/view
+Please note that this is done for each build, and not only tagged ones.
+
+Build results from a tag are released on GitHub: https://github.com/muhkuh-sys/org.muhkuh.lua-wxlua/releases
