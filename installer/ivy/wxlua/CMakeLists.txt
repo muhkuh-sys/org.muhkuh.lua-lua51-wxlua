@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 
 SET(CPACK_INCLUDE_TOPLEVEL_DIRECTORY FALSE)
-SET(CPACK_PACKAGE_FILE_NAME lua51-${VERSION_FULL})
+SET(CPACK_PACKAGE_FILE_NAME lua51-wxlua-${VERSION_FULL})
 
 SET(CPACK_GENERATOR "ZIP")
 INCLUDE(CPack)
@@ -15,7 +15,7 @@ CONFIGURE_FILE(ivy.xml ivy-${VERSION_FULL}.xml)
 #
 INSTALL(FILES /usr/local/mingw-w64-i686/bin/libwx.dll
         RENAME wx.dll
-        DESTINATION windows_x86/lib
+        DESTINATION windows_x86
 )
 
 
@@ -25,7 +25,7 @@ INSTALL(FILES /usr/local/mingw-w64-i686/bin/libwx.dll
 #
 INSTALL(FILES /usr/local/mingw-w64-x86_64/bin/libwx.dll
         RENAME wx.dll
-        DESTINATION windows_amd64/lib
+        DESTINATION windows_amd64
 )
 
 
