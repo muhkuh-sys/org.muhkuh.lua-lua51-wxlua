@@ -13,7 +13,7 @@ CONFIGURE_FILE(ivy.xml ivy-${VERSION_FULL}.xml)
 #
 # Install the 32bit files.
 #
-INSTALL(FILES /usr/local/mingw-w64-i686/bin/libwx.dll
+INSTALL(FILES /usr/mingw-w64-i686/bin/libwx.dll
         RENAME wx.dll
         DESTINATION windows_x86
 )
@@ -23,7 +23,7 @@ INSTALL(FILES /usr/local/mingw-w64-i686/bin/libwx.dll
 #
 # Install the 64bit files.
 #
-INSTALL(FILES /usr/local/mingw-w64-x86_64/bin/libwx.dll
+INSTALL(FILES /usr/mingw-w64-x86_64/bin/libwx.dll
         RENAME wx.dll
         DESTINATION windows_amd64
 )
