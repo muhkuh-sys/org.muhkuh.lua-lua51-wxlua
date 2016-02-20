@@ -36,5 +36,5 @@ deploy:
     - build/ivy.xml
   skip_cleanup: true
   on:
-    repo: muhkuh-sys/org.muhkuh.lua-wxlua
+    repo: muhkuh-sys/org.muhkuh.lua-lua51-wxlua
     tags: true

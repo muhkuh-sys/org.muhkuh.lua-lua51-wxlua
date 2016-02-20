@@ -1,9 +1,9 @@
-flasher
-=======
+org.muhkuh.lua-lua51-wxlua
+==========================
 
 == Status
 
-TravisCI: image:https://travis-ci.org/muhkuh-sys/org.muhkuh.lua-wxlua.svg?branch=master["TravisCI build status", link="https://travis-ci.org/muhkuh-sys/org.muhkuh.lua-wxlua"]
+TravisCI: image:https://travis-ci.org/muhkuh-sys/org.muhkuh.lua-lua51-wxlua.svg?branch=master["TravisCI build status", link="https://travis-ci.org/muhkuh-sys/org.muhkuh.lua-lua51-wxlua"]
 
 
 == About
@@ -24,9 +24,9 @@ The patched wxLua and repositories are here: https://github.com/muhkuh-sys/wxlua
 wxLua is quite huge and it depends on wxWidgets which is not small either. Both wxLua and wxWidgets would easily break the 50 minutes limit on TravisCI, so they are build on the "openSUSE Build Serive" (OBS):
 https://build.opensuse.org/package/show/home:doc_bacardi/mingw64-wxwidgets https://build.opensuse.org/package/show/home:doc_bacardi/mingw64-lua51-wxlua
 
-On TravisCI the wxLua Ubuntu package is only re-packaged as an MBS Ivy package: https://travis-ci.org/muhkuh-sys/org.muhkuh.lua-wxlua
+On TravisCI the wxLua Ubuntu package is only re-packaged as an MBS Ivy package: https://travis-ci.org/muhkuh-sys/org.muhkuh.lua-lua51-wxlua
 
 The build results from TravisCI are copied after auccess to Bintray: https://bintray.com/muhkuh/Muhkuh/lua51-wxlua/view
 Please note that this is done for each build, and not only tagged ones.
 
-Build results from a tag are released on GitHub: https://github.com/muhkuh-sys/org.muhkuh.lua-wxlua/releases
+Build results from a tag are released on GitHub: https://github.com/muhkuh-sys/org.muhkuh.lua-lua51-wxlua/releases
