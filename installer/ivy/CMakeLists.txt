@@ -4,6 +4,9 @@ PROJECT("wxlua")
 
 INCLUDE(ExternalProject)
 
+# Get the VCS version.
+INCLUDE(../../cmake/version.cmake)
+
 # Get the version of the package.
 GET_FILENAME_COMPONENT(CMAKE_PREFIX_PATH "../../build_windows32/lua/install" ABSOLUTE)
 SET(org.muhkuh.lua-lua51-wxlua_VERSION "2.8.12")
@@ -11,6 +14,7 @@ SET(org.muhkuh.lua-lua51-wxlua_VERSION "2.8.12")
 
 SET(PACKAGE_CMAKE_ARGS "")
 LIST(APPEND PACKAGE_CMAKE_ARGS "-DVERSION_FULL=${org.muhkuh.lua-lua51-wxlua_VERSION}")
+LIST(APPEND PACKAGE_CMAKE_ARGS "-DPROJECT_VERSION_VCS=${PROJECT_VERSION_VCS}")
 LIST(APPEND PACKAGE_CMAKE_ARGS "-DARTIFACT_LISTS_OUTPUT=${CMAKE_CURRENT_BINARY_DIR}/artifacts")
 
 ExternalProject_Add(TARGET_wxlua
