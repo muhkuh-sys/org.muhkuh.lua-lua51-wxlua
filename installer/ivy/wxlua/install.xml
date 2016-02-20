@@ -1,13 +1,11 @@
-<project xmlns:ivy="antlib:org.apache.ivy.ant" xmlns:if="ant:if" name="lua" default="install">
+<project xmlns:ivy="antlib:org.apache.ivy.ant" xmlns:if="ant:if" name="org.muhkuh.lua.lua51-wxlua" default="install">
 	<target name="install" description="install all components">
-		<echo>org.lua.lua</echo>
+		<echo>org.muhkuh.lua.lua51-wxlua</echo>
 		
 		<sequential if:true="${install.os_arch.linux_i386}">
-			<copy file="linux_i386/wx.so"         todir="${install.luaplugin}" />
 		</sequential>
 		
 		<sequential if:true="${install.os_arch.linux_x86_64}">
-			<copy file="linux_x86_64/wx.so"       todir="${install.luaplugin}" />
 		</sequential>
 		
 		<sequential if:true="${install.os_arch.windows_x86}">
